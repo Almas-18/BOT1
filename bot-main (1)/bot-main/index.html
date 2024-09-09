@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticketing System</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="homecss.css">
+	<script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body onload="myFunction()">
+
+    <div id="loading">
+       <div class="loader">
+                <div class="loader loader-inner">   
+                </div>
+        </div>
+    </div>
+
+<div class="FullPage">
+<!--- //////////////////////////////////////////////Navbar////////////////////////////////////////////////////////////// -->
+    <div class="mcontainer">
+        <div class="navbar">
+            <div class="logo"><label id="lg">Ticket System</label></div>
+            <ul>
+                <li><a class="active" href="#"> Home</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+                <li><a href="about.html"> login</a></li> 
+                <button style="background-color: dodgerblue; border: none;" class="button">
+                    <li><a class="img1" href="profile.php"><img src="images/profile-line.png" alt="account" width="25" height="23" ></a></li>
+                </button>
+            </ul>
+        </div>
+    </div>
+
+    <section class="sec">
+    	<div class="logo2"> 
+			<img src="C:\Users\almaa\Downloads\musemate flux4.jpg" style="height: 100px; width: 100px;"> 
+	    	<div class="wrapper">
+		        <div class="search-input">
+		          <input type="search" placeholder="!!BOOK EASY,EXPLORE MORE !!" readonly="">
+		        </div>
+		    </div>
+
+		    <a href="create_ticket.php"><button class="donateBtn">Create Ticket</button></a>
+			<a href="view_ticket.php"><button class="joinBtn">View Ticket</button></a>
+		</div>
+    </section>
+
+    <div class="ActualContent">
+		    <div class="content1">
+		            <h1 style="color: white;">!!..Ticketing System..!!</h1>
+		            <p style="color: white;">Welcome to the ticketing system. Our bot is here to assist you with your queries and help you create tickets for your issues. Please ask your questions below.</p>
+		            
+		            <div class="Allbuttons">
+		            	<button class="ReceiveBtn" id="receivebtn" name="ReceiveBtn"> <a href="create_ticket.php" style=" text-decoration: none; ">Create Ticket</a> </button>&nbsp;&nbsp;
+		            	<button class="PaymentBtn" id="paymentbtn"> <a href="view_ticket.php" style=" text-decoration: none; ">View Tickets</a> </button>
+		            </div>
+		    </div>
+		    <div class="content1">
+		    	<section class="msger">
+        <header class="msger-header">
+          <div class="msger-header-title">
+            <img src="images/robot.png" alt="" srcset="">
+            <p>Ticket System Bot</p>
+          </div>
+        </header>
+        <main class="msger-chat">
+          <div class="msg left-msg">
+            <div
+             class="msg-img"
+             style="background-image: url(images/bot.png)"
+            ></div>
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">BOT</div>
+                <div class="msg-info-time">12:45</div>
+              </div>
+              <div class="msg-text">
+                Hi, welcome to the Ticket System! Please describe your issue and I will create a ticket for you.
+              </div>
+            </div>
+          </div>
+          <div class="msg right-msg">
+            <div
+             class="msg-img"
+             style="background-image: url(images/user.png)"
+            ></div>
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">You</div>
+                <div class="msg-info-time">12:46</div>
+              </div>
+      
+              <div class="msg-text">
+                I am facing an issue with logging in.
+              </div>
+            </div>
+          </div>
+        </main>
+        <form class="msger-inputarea">
+          <input type="text" class="msger-input" placeholder="Enter your issue...">
+          <button type="button" class="msger-send-btn"><i class="fa fa-paper-plane"></i></button>
+        </form>
+      </section>
+		    </div>
+    </div>
+
+	<footer class="footer">
+		<div class="copyright">
+		  	  <h3> All rights reserved. ©Ticketing System</h3>
+		</div>
+	</footer>
+</div>
+</body>
+
+	<script>
+      var preloader = document.getElementById('loading');
+		      function myFunction() 
+		      {
+		        preloader.style.display = 'none';
+		      }
+    </script>
+    <script src="main.js"></script>
+</html>

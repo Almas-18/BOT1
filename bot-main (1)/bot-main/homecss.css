@@ -1,0 +1,257 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;  
+    transition: background-color 2s ease-out 100ms;
+}
+
+html,body{
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#loading{
+  margin-top: 19%;
+  margin-left: 48%;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: orange no-repeat center;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.loader {
+    box-sizing: border-box; 
+    width: 100%; 
+    height: 100%;
+    border: 5px solid #162534; 
+    border-top-color: #4bc8eb; 
+    border-bottom-color: #f13a8f; 
+    border-radius: 50%; 
+    animation: rotate 5s linear infinite; 
+}
+
+.loader-inner{
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 2.5s;
+}
+
+  @keyframes rotate {
+    0%{
+        transform: scale(1) rotate(360deg);
+    }
+    50%{
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+
+}
+
+.FullPage{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.sec{
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo2{
+  display: flex;
+}
+
+/* Search Bar*/
+
+.wrapper
+{
+  margin-top: 15px;
+  margin-left: 15vw;
+  min-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  border-style: groove;
+  transition: step-end;
+  transition: all .2s ease-in-out;
+}
+
+.wrapper:hover{
+  transition: all .2s ease-out;
+  box-shadow: 0 0 6px dodgerblue;
+}
+
+.wrapper .search-input{
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.search-input input{
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 60px 0 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  font-weight: 1000;
+  cursor: none;
+}
+
+.search-input .icon{
+  height: 75px;
+  width: 75px;
+  line-height: 55px;
+  top: -1px;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+.logo2 button{
+  cursor: pointer;
+  background: linear-gradient(to right,#00BFFF,dodgerblue);
+  width: 120px;
+  outline: none;
+  color: #fff;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+  font-weight: 1000;
+}
+
+.donateBtn{
+  border-style: none;
+  margin-left: 14vw;
+}
+
+.joinBtn{
+  border-style: none;
+  margin-left: 10px;
+}
+
+#toggler, .sec label{
+  display: none;
+}
+
+.ActualContent{
+  display: flex;
+  padding: 20px;
+}
+
+.content1{
+  height: 325px;
+  margin-top: 10px;
+  width: 100%;
+  background: dodgerblue;
+  grid-area: content2;
+  border-radius: 15px;
+  display: grid;
+  grid-gap: 0.8rem;
+  padding: 10px;
+  grid-template-columns: 2fr ;
+  grid-template-rows: 2fr ;
+  grid-template-areas: "topdonaterhead"
+                       "Top-1"
+                       "Top-2"
+                       "Top-3";
+  min-width: 200px;
+  margin-right: 10px;
+}
+
+.topdonaterhead{
+  height: 40px;
+  width: 100%;
+  background: dodgerblue;
+  grid-area: topdonaterhead;
+  border-radius: 15px;
+}
+
+.Top-1{
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  grid-area: Top-1;
+  border-radius: 25px;
+  min-width: 160px;
+  font-size: 20px;
+}
+
+.Top-2{
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  grid-area: Top-2;
+  border-radius: 25px;
+  min-width: 160px;
+  font-size: 20px;
+}
+
+.Top-3{
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  grid-area: Top-3;
+  border-radius: 25px;
+  min-width: 160px;
+  font-size: 20px;
+}
+
+.content1  button{
+  color: white;
+  background-color: cyan;
+  width: 120px;
+  outline: none;
+  color: #fff;
+  height: 45px;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+.Allbuttons{
+  border-style: none;
+  justify-content: space-around;
+}
+
+#receivebtn:hover, .donateBtn:hover, .joinBtn:hover, .CryptoBtn:hover, .PaymentBtn:hover, .wrapper:hover{
+  box-shadow: 0 0 12px black;
+}
+
+
+}
+
+@media screen and (min-width: 600px){
+  .menu{
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .sec label{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}

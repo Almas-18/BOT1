@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    background: linear-gradient(to right, #1E2F97, dodgerblue);
+    color: #fff;
+    justify-content: space-between;
+    transition: background-color 2s ease-out 100ms;
+    grid-area: navbar;
+}
+.navbar .logo{
+    font-size: 33px;
+    align-items: center; 
+    color: white;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.navbar ul{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    display: flex;
+    list-style: none;
+}
+.navbar ul li
+{
+    margin: 0 5px;    
+}
+.navbar a.img1{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 4px;
+}
+.navbar ul li a{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.navbar a:hover, .navbar a.active
+{
+    background-color: white;
+    color: black;
+    height: 100%;
+    transition: all .5s ease ;
+}
+#toggle{
+    display: none;
+}
+.togglearea{
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.togglearea label
+{
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.togglearea label span
+{
+   background-color: black;
+   height: 4px;
+   width: 80%;
+   margin: 2px 0px;
+   border-radius: 10px;
+}
+.togglearea{
+    display: none;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(to right, dodgerblue, #1E2F97);
+    color: #fff;
+    padding: 18px 0 30px;
+    font-size: 13px;
+    line-height: 14px;
+    transition: background-color 2s ease-out 100ms;
+    grid-area: Footer;
+    display: flex;
+    justify-content: space-around;
+}
+
+#loginstatus{
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  border-style: none;
+}
+.Footer .copyright
+{
+    padding-left: 25px;
+}
+
+@media screen and (max-width: 480px){
+    .navbar
+    {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+    #toggle:checked + .navbar
+    {
+        display: flex;
+    }
+    .togglearea{
+        display: flex;
+    }
+    .navbar a:hover
+    {
+    background-color: white;
+    color: black;
+    }
+
+}
+
+
+/* ERROR WARNING SUCCESS INFO MESSAGE */
+
+.WrapperClass{
+    width: 380px;
+    height: 150px;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.toast{
+    width: 100%;
+    padding: 20px;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.3fr 6fr 0.5fr;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.08);
+    position: absolute;
+    background-color: white;
+}
+
+.success{
+    border-left: 8px solid #47f764;
+}
+
+.success i{
+    color: #47f764;
+}
+.container-1{
+    font-size: 35px;
+
+}
+
+.container-1,container-2{
+    align-self: center;
+}
+
+.error{
+    border-left: 8px solid #ff355b;
+}
+
+.error i{
+    color: #ff355b;
+}
+
+.info{
+    border-left: 8px solid #2f86eb;
+}
+
+.info i{
+    color: #2f86eb;
+}
+
+.warning{
+    border-left: 8px solid #ffc021;
+}
+
+.warning i{
+    color:  #ffc021;
+}
+
+.container-2 p:first-child{
+    font-size: 16px;
+    color: #101020;
+    font-weight: 600;
+}
+
+.container-2 p:last-child{
+    font-size: 12px;
+    font-weight: 400;
+    color: #656565;
+
+}
+
+.toast button{
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    line-height: 0;
+    cursor: pointer;
+    color: #656565;
+}
+
+.toast:not(:last-child){
+    margin-bottom: 50px;
+}
